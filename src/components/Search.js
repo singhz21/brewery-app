@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react'
 
-const Search = (props) => {
+const Search = (filterBrew) => {
 
-  console.log(props)
 
   const [search, setSearch] = useState("")
 
@@ -12,11 +11,7 @@ const Search = (props) => {
     e.preventDefault()
     console.log('event',e)
     let value = e.target.value
-    console.log('value', value)
-    let filter = props.filter(items => {
-      return items.name.toLowerCase().includes(value.toLowerCase())
-    })
-    console.log('filter', filter)
+    setSearch(value)
   }
 
   return (
