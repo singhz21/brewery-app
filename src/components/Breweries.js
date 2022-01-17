@@ -1,18 +1,19 @@
 // This component contains brewery details
 
-import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const Breweries = () => {
+const Breweries = (props) => {
 
-  const [name, brewery_type, city] = useState("")
   return (
     <div className="breweries-card-container">
       <div className="brewery brewery-card-small">
-        <p>Name: {name}</p>
-        <p>Brewery Type: {brewery_type}</p>
-        <p>City: {city}</p>
+        <p><strong>Name:</strong> {props.name}</p>
+        <p><strong>Brewery Type:</strong> {props.brewery_type}</p>
+        <p><strong>City:</strong> {props.city}</p>
       </div>
-    <button className="btn" id="view-btn">View Details</button>
+      <Link to={`/${props.id}`}>
+        <button className="btn" id="view-btn">View Details</button>
+      </Link>
     </div>
   )
 }

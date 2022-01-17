@@ -1,20 +1,15 @@
-import Search from "./components/Search";
-import Breweries from "./components/Breweries"
-import Brewery from "./components/Brewery"
+import { Route, Routes } from "react-router-dom";
+import Body from "./components/Body";
+import Brewery from "./components/Brewery";
 
 function App() {
+
   return (
     <div className="App">
-      <Search />
-      <br />
-      <br />
-      <Breweries />
-      <Breweries />
-      <Breweries />
-      <Breweries />
-      <Breweries />
-      <Breweries />
-      <Brewery />
+      <Routes>
+        <Route path="/" element={<Body />} />
+        <Route exact path="/:id" element={<Brewery />} />
+      </Routes>
     </div>
   );
 }
