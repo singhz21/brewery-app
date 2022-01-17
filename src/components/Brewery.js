@@ -1,0 +1,1 @@
+// This component contains elements to populate a simple brewery information card

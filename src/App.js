@@ -1,10 +1,9 @@
+import Search from "./components/Search";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Brewery App</h1>
-      </header>
+      <Search />
     </div>
   );
 }
